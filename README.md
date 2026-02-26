@@ -50,23 +50,21 @@ MOV AH,4CH
 INT 21H
 CODE ENDS
 END
+
 ```
 
 #### Output Table
+<img width="991" height="405" alt="image" src="https://github.com/user-attachments/assets/9705708a-d9a4-403a-9e18-a4380ddd009b" />
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|       1200🔢       01         12
-
-|         1200                    |
 
 #### Manual Calculations
+<img width="923" height="311" alt="image" src="https://github.com/user-attachments/assets/eb306711-a743-4eb0-8b7d-20561d1e27b6" />
 
-(Add your calculation here)
 
 ---
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+<img width="826" height="550" alt="image" src="https://github.com/user-attachments/assets/0eaf0133-a5dc-4c94-8210-3a169dc0e89b" />
 
 ## 2. SUBTRACTION
 
@@ -85,40 +83,38 @@ END
 
 #### Program
 ```asm
-CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
-ORG 1000H
-MOV SI,2000H
-MOV CL,00H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-SUB AX,BX
-JNC L1
-INC CL
-L1:
-MOV [SI+04H],AX
-MOV [SI+06H],CL
-MOV AH,4CH
-INT 21H
-CODE ENDS
-END
+code segment
+assume cs:code,ds:code
+org 1000h
+mov AX,1234h
+mov BX,1234h
+sub AX,BX
+jnc down
+inc CL
+down:mov SI,1200h
+mov [sI],AX
+mov [SI+2],CL
+mov ah,4ch
+int 21H
+code ends
+end
+
 ```
 
 
 #### Output Table
+<img width="1010" height="413" alt="image" src="https://github.com/user-attachments/assets/8e6c927c-3ffc-4e2b-96a7-2f26b4c38c1d" />
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="606" height="374" alt="image" src="https://github.com/user-attachments/assets/7727ce35-699a-4a72-a457-809a745fcce2" />
 
 ---
 
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="818" height="545" alt="image" src="https://github.com/user-attachments/assets/597c9b42-4099-4027-8536-434268d05985" />
 
 ## 3. MULTIPLICATION
 
@@ -138,35 +134,35 @@ END
 #### Program
 
 ```asm
-CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
-ORG 1000H
-MOV SI,2000H
+code segment
+assume cs:code,ds:code
+org 1000h
 MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-MUL BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
-MOV AH,4CH
-INT 21H
-CODE ENDS
-END
+mov AX,1234h
+mov BX,1234h
+mul BX
+mov si,1200h
+mov [si],ax
+mov [si+02h],dx
+mov ah,4ch
+int 21h
+code ends
+end
+
 ```
 
 #### Output Table
+<img width="940" height="632" alt="image" src="https://github.com/user-attachments/assets/318c0813-f583-48fb-b6b8-6b5bcbb791d0" />
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="683" height="568" alt="image" src="https://github.com/user-attachments/assets/e6d68a6c-6994-4eb8-8d4d-ed2a2708a5bd" />
 
 ---
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="992" height="478" alt="image" src="https://github.com/user-attachments/assets/992d5d92-f390-45c3-90ef-c4486a926c4b" />
 
 ## 4. DIVISION
 
@@ -184,33 +180,33 @@ END
 
 ```asm
 CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
+ASSUME CS:CODE,DS:CODE
 ORG 1000H
-MOV SI,2000H
 MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
+MOV AX,1234H
+MOV BX,1234H
 DIV BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
+MOV SI,1200H
+MOV [SI],AX
+MOV [SI+02H],DX
 MOV AH,4CH
 INT 21H
 CODE ENDS
-END
+
 ```
 
 #### Output Table
+<img width="940" height="609" alt="image" src="https://github.com/user-attachments/assets/dc4e6836-ae72-4c68-b8a8-14a835dc3117" />
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="520" height="421" alt="image" src="https://github.com/user-attachments/assets/20197144-32d2-4420-9b70-9de9ccc0f987" />
 
 ---
 ## OUTPUT FROM MASM SOFTWARE
+<img width="940" height="629" alt="image" src="https://github.com/user-attachments/assets/f63212d5-98ee-4da2-aabc-637beb28e57b" />
 
 
 
